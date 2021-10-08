@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap");
+
+@import "./sass/helpers/variables";
+@import "./sass/helpers/functions";
+@import "./sass/helpers/mixins";
+
+@import "./sass/leyout/grid_system";
+@import "./sass/pages/global";
+@import "./sass/components/headings";
+@import "./sass/components/buttons";
+
+@import "./sass/leyout/header";
+@import "./sass/pages/home_page";
+@import "./sass/leyout/footer";

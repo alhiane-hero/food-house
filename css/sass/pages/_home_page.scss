@@ -1,0 +1,166 @@
+/* start about-us */
+.about-us {
+    @include downUpPadding($generalPadding, $generalPadding);
+    .text {
+        .title {
+            margin-bottom: 0.7rem;
+            font: {
+                size: $defaultFont + 0.3;
+                weight: 600;
+            }
+            letter-spacing: 1px;
+            color: $blackColor;
+            span {
+                color: $mainColor;
+            }
+        }
+        .desc {
+            color: $greyColor;
+            line-height: 40px;
+            margin-bottom: 1rem;
+        }
+        .food-icon {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: $mainColor;
+            @include mobileQuery {
+                margin: 0 auto;
+            }
+            i {
+                font-size: $defaultFont + 1.5;
+                color: $whiteColor;
+            }
+        }
+    }
+    .img {
+        @include extraSmallQuery {
+            margin-bottom: 40px;
+        }
+        figure {
+            position: relative;
+            width: 310px;
+            height: 310px;
+            display: flex;
+            margin-left: auto;
+            &::before {
+                content: "";
+                @include generatePosition(absolute, -1, 40px, 0, 0, -40px);
+                width: 100%;
+                height: 100%;
+                background-color: $mainColor;
+                @include mobileQuery {
+                    display: none;
+                }
+            }
+            @include mobileQuery {
+                margin: 0 auto;
+            }
+            @include extraSmallQuery {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+/* end about-us */
+
+/* start food-offer */
+.food-offer {
+    position: relative;
+    @include downUpPadding($generalPadding, $generalPadding);
+    background: {
+        image: url(../img/offer.png);
+        size: cover;
+        repeat: no-repeat;
+    }
+    &::before {
+        content: "";
+        @include overlay;
+    }
+    .text {
+        @include generatePosition(relative, 2);
+        text-align: center;
+        h2 {
+            margin-bottom: 0;
+            color: $whiteColor;
+        }
+        p {
+            margin: 0.5rem 0 1rem;
+            font: {
+                weight: 300;
+                size: $defaultFont;
+            }
+        }
+    }
+}
+/* end food-offer */
+
+/* start food-menu */
+.food-menu {
+    position: relative;
+    @include downUpPadding($generalPadding, $generalPadding);
+    .food-box {
+        .title {
+            font-size: $defaultFont + 0.3;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: $blackColor;
+            margin-bottom: 1.7rem;
+        }
+        .food-list {
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &:not(:last-of-type) {
+                    margin-bottom: 1.7rem;
+                }
+                font-size: $defaultFont;
+                color: $blackColor;
+                span {
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+}
+/* end food-menu */
+
+/* start testimonials */
+.testimonials {
+    position: relative;
+    @include downUpPadding($generalPadding, $generalPadding);
+    background: {
+        image: url(../img/testimonial.png);
+        size: cover;
+        repeat: no-repeat;
+    }
+    &::before {
+        content: "";
+        @include overlay;
+    }
+    h2 {
+        @include generatePosition(relative, 2);
+        color: $whiteColor;
+    }
+    .text {
+        @include generatePosition(relative, 2);
+        padding: 60px 30px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: $radius;
+        .desc {
+            line-height: 40px;
+            margin-bottom: 12px;
+        }
+        .author {
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: $mainColor;
+        }
+    }
+}
+/* end testimonials */

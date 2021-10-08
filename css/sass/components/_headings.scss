@@ -1,0 +1,19 @@
+.heading {
+    margin-bottom: 50px;
+    font: {
+        size: $defaultFont * 2;
+        weight: 600;
+    }
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @if $blackColor == #333333 {
+        color: $blackColor;
+    } @else {
+        color: $whiteColor;
+    }
+    @include mobileQuery {
+        margin-bottom: 25px;
+        font-size: $defaultFont + 0.7;
+    }
+}

@@ -1,0 +1,66 @@
+.container {
+    width: 100%;
+    @include generatePadding(0, 15px, 0, 15px);
+    margin-left: auto;
+    margin-right: auto;
+    @include smallQuery {
+        width: 750px;
+    }
+    @include mediumQuery {
+        width: 970px;
+    }
+    @include largeQuery {
+        width: 1170px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col {
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+
+@for $i from 1 through 12 {
+    .col-mb-#{$i} {
+        @include mobileQuery {
+            flex: 0 0 (100% / (12 / $i));
+            max-width: (100% / (12 / $i));
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-xs-#{$i} {
+        @include extraSmallQuery {
+            flex: 0 0 (100% / (12 / $i));
+            max-width: (100% / (12 / $i));
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-sm-#{$i} {
+        @include smallQuery {
+            flex: 0 0 (100% / (12 / $i));
+            max-width: (100% / (12 / $i));
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-md-#{$i} {
+        @include mediumQuery {
+            flex: 0 0 (100% / (12 / $i));
+            max-width: (100% / (12 / $i));
+        }
+    }
+}

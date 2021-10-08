@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap");
+
+@import "./sass/helpers/variables";
+@import "./sass/helpers/functions";
+@import "./sass/helpers/mixins";
+
+body {
+    font: {
+        family: "Cairo", sans-serif;
+    }
+}
+
+/* start header */
+header {
+    nav {
+        .navbar {
+            &.show {
+                height: 216px;
+            }
+        }
+    }
+    .hero {
+        p {
+            letter-spacing: 0;
+        }
+    }
+}
+/* end header */
+
+/* start about us */
+.about-us {
+    .img {
+        figure {
+            &::before {
+                @include generatePosition(absolute, -1, 40px, 40px, 0, 0);
+            }
+        }
+    }
+}
+/* end about us */
+
+/* start food-offer */
+.food-offer {
+    .text {
+        p {
+            letter-spacing: 0;
+        }
+    }
+}
+/* end food-offer */

@@ -1,0 +1,17 @@
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    background-color: $whiteColor;
+    border: none;
+    border-radius: $radius * 5;
+    font-size: $defaultFont;
+    color: $mainColor;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
+    @include generateTransition(all);
+    &:hover {
+        background-color: $mainColor;
+        color: $whiteColor;
+    }
+}
